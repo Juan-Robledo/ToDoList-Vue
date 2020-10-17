@@ -1,28 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <encabezado-app>To Do List</encabezado-app>
+    <to-do-list></to-do-list>
+    <pie-app>©Curso Full-Stack Doctadevs</pie-app>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import EncabezadoApp from './components/EncabezadoApp'
+import ToDoList from './components/ToDoList'
+import PieApp from './components/PieApp'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    EncabezadoApp,
+    ToDoList,
+    PieApp
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body{
+    font-family: Verdana;
+  }
 </style>
