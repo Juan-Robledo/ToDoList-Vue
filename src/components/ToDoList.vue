@@ -3,7 +3,7 @@
         <input type="text" v-model="inputTarea" @keyup.enter="agregarTarea">
         <button @click="agregarTarea" >Agregar Tarea</button>
         <ul v-if="listaTarea.length != 0">
-            <li v-for="(tarea, key) in listaTarea" :key="key">{{tarea}}</li>
+            <li v-for="(tarea, key) in listaTarea" :key="key"><strong>{{tarea}}</strong></li>
         </ul>
         <h3 v-else>
             No hay tareas pendientes
@@ -36,12 +36,30 @@ export default {
     .container{
         height: 470px;
         max-width: 1140px;
-        display: block;
-        margin: 50 auto;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
     }
-
+    input{
+        width: 400px;
+        color: #662e9b;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
     button{
         background-color: #662e9b;
         color: white;
+        border: none;
+        width: 250px;
+        border-radius: 9px;
+        font-size: 1.2rem;
+    }
+    ul{
+        padding: 0;
+    }
+    li{
+        list-style: none;
     }
 </style>

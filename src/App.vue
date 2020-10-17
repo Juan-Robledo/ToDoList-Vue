@@ -24,5 +24,6 @@ export default {
 <style>
   body{
     font-family: Verdana;
+    margin: 0 auto;
   }
 </style>
